@@ -24,7 +24,7 @@ export default function Carousel({ slides, kind, label }: CarouselProps) {
     if (paused || interacting) return;
     const timer = window.setInterval(() => {
       setActive((current) => (current + 1) % slides.length);
-    }, 5000);
+    }, 2000);
     return () => window.clearInterval(timer);
   }, [active, interacting, paused, slides.length]);
 
